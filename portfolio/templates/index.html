@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rowan Lodewijks</title>
+  {% load static %}
+  <link rel="icon" type="image/x-icon" href="{% static './assets/img/favicon.png' %}">
+  <link rel="stylesheet" href="{% static './css/stylesheet.css' %}" />
+  <script src="{% static './js/script.js' %}" defer></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="menu">
+    <div class="top_nav" class="menu">
+      <div class="logo" class="menu">
+        <img src="{% static './img/logobg.png' %}" class="menu logo_img">
+      </div>
+      <h6 class="menu">Rowan</h6>
+      <p class="menu">Web Developer</p>
+    </div>
+    <ul class="hidden">
+      <a href="/" class="active"><li class="menu" class="active">Home</li></a>
+      <a href="/aboutme/"><li class="menu">About Me</li></a>
+      <a href="/projects/"><li class="menu">My Projects</li></a>
+      <a href="/contact/"><li class="menu">Contact Me</li></a>
+    </ul>
+    <div class="ion_icons">
+      <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+      <a href="https://github.com/RowanLodewijks"><ion-icon name="logo-github"></ion-icon></a>
+      <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+    </div>
+  </nav>
+  <!-- EINDE NAVBAR -->
+
+  <!-- MAIN -->
+  <div class="container">
+    <div class="menu_wrapper">
+      <button class="menu_toggle" onclick="lockScroll();"><ion-icon name="menu-outline"></ion-icon></button>
+      <select class="theme">
+        <option value="dark">Dark</option>
+        <option value="light">Light</option>
+        <option value="gay">pInEaPpLe</option>
+      </select>
+    </div>
+    <div class="header">
+      <h1 id="deel1">Hi,<br>I`m Rowan,<br>Web Developer</h1>
+      <p>Front/Back End Developer</p>
+    </div>
+    <h3 class="subtitles" id="deel2">About Me</h3>
+    <div class="about_me">
+      <div class="about_me_left"><img src="{% static './img/logobg.png' %}" class="logo_img"></div>
+      <div class="about_me_right">
+        <p>Ik ben Rowan Lodewijks. Ik ben 17 jaar en ik zit op het Grafish Lyceum Utrecht. Ik zit nu in het 2e jaar 
+        van de opleiding Webdevelopper. Mijn hobby's zijn Programmeren en gamen en ik woon in IJsselstein.<br><br></p>
+        <div class="buttons">
+          <a href="https://github.com/RowanLodewijks"><div class="button">Mijn GitHub</div></a>
+          <a href="{% static './img/cv.pdf' %}"><div class="button">Mijn CV</div></a>
+        </div>
+      </div>
+    </div>
+    <h3 class="subtitles" id="deel3">My Projects</h3>
+    <div class="my_projects">
+      <div class="project">
+        <img src="{% static './img/logobg.png' %}" class="logo_img">
+        <div class="project_link"><a href="#">Website 1</a></div>
+      </div>
+      <div class="project">
+        <img src="{% static './img/logobg.png' %}" class="logo_img">
+        <div class="project_link"><a href="#">Website 2</a></div>
+      </div>
+      <div class="project">
+        <img src="{% static './img/logobg.png' %}" class="logo_img">
+        <div class="project_link"><a href="#">Website 3</a></div>
+      </div>
+    </div>
+
+    <h3 class="subtitles">Contact</h3>
+    <div class="contact" id="deel4">
+        <button class="for-modal">Open Form</button>
+        <dialog class="example-modal">
+            <h2>Contact</h2>
+            <button class="close-modal"><ion-icon name="close-outline"></ion-icon></button>
+          <form action="https://formsubmit.co/13ad722daa5c1b0c662b4e6b4566825f" method="POST">
+              <input type="text" id="name" name="name" placeholder="Name" required>
+              <input type="email" id="email" name="email" placeholder="E-mail" required>
+              <input type="text" id="subject" name="subject" placeholder="Subject">
+              <input type="text" id="message" name="message" placeholder="Message" required>
+              <input type="hidden" name="_next" value="https://rowanlodewijks.nl/bedankt.php">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="submit" id="submit" class="submit">
+          </form>
+        </dialog>
+    </div>
+  </div>
+  <!-- EINDE MAIN -->
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer_top">
+      <div class="footer_top_text">
+        <h4>Rowan Lodewijks</h4>
+        <p>Hogebiezen 26<br>3401 RL IJSSELSTEIN<br>Nederland<br>06 - 131 551 94<br>lodewijksrowan@gmail.com</p>
+      </div>
+      <div class="footer_top_text">
+        <h4>Meer Info</h4>
+        <p>Onze Werktijden<br>Belangrijk Om Te Weten<br>Bestelling</p>
+      </div>
+      <div class="footer_top_text">
+        <h4>Support</h4>
+        <p>Contact<br>Productveiligheid
+          Mededelingen<br>Softwareondersteuning<br>Reparaties<br>Productregistratie<br>Feedback geven</p>
+      </div>
+      <div class="footer_top_text">
+        <h4>Socials</h4>
+        <span>
+          <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+          <a href="https://github.com/RowanLodewijks" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+          <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+        </span>
+      </div>
+    </div>
+    <div class="line"></div>
+    <div class="footer_bottom">
+      <ul>
+        <li><a href="#">©
+            <script>	document.write(new Date().getFullYear())</script> Rowan Lodewijks
+          </a></li>
+        <li><a href="#">Algemene voorwaarden</a></li>
+        <li><a href="#">Privacyverklaring</a></li>
+        <li><a href="#">Website laten maken</a></li>
+      </ul>
+    </div>
+  </footer>
+  <!-- EINDE FOOTER -->
+</body>
+
+</html>
+
+{% comment %} {% block content %}
+{% endblock %} {% endcomment %}
+
+{% comment %} Links voor anchor tag {% endcomment %}
+{% comment %} https://www.askpython.com/django/django-url-template {% endcomment %}
+{% comment %} https://stackoverflow.com/questions/11879416/pretty-and-seo-friendly-urls-in-django {% endcomment %}
